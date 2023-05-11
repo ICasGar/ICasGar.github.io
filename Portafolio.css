@@ -1,147 +1,168 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
-
 *{
-    background-color: rgb(245, 216, 109);
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    font-size: 1.05em;
+    font-family: sans-serif;
 }
 body{
-  font-family: 'Roboto', sans-serif;
+    background-color: rgb(59, 59, 59);
+    color: rgb(236, 236, 236);
+    text-align: center;
 }
-.Header {
-  color: whitesmoke;
-  background-color: rgb(49, 49, 49);
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  align-items: center;
+header{
+    font-size: 1.6em;
 }
-.Header p{
-  background-color: rgb(49, 49, 49);
+header .menu-d {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
-.Header .menu {
-  background-color: rgb(49, 49, 49);
-  grid-column: 4 / 7;
-  display: flex;
+header .menu-d p{
+    text-align: left;
+    margin-left: 10%;
 }
-.Header ul li {
-  background-color: rgb(49, 49, 49);
-  margin-right: 3em;
-  list-style: none;
+header .menu{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
-.Header a {
-  background-color: rgb(49, 49, 49);
-  text-decoration: none;
-  color: whitesmoke;;
-  cursor: pointer;
+header .menu a{
+    color: white;
+    text-decoration: none;
+    padding: 15%;
+    transition: 0.5s;
 }
-.Header a:hover {
-  color: rgb(245, 216, 109);
+header .menu a:hover{
+    color: rgb(236, 188, 57);
+    transition: 0.2s;
 }
-.Header .menu-bar {
-  display: none;
+.btn{
+    font-size: 2em;
+    float: right;
+    color: white;
+    display: none;
+    margin-right: 0;
 }
-@media only screen and (max-width: 600px){
-    .Header {
-        background-color: rgb(49, 49, 49);
-        display: grid;
-        grid-template-columns: repeat(8, 1fr);
-        align-items: center;
-      }
-    .Header .logo {
-        height: 60px;
-        width: 60px;
-        grid-column: 2 / 3;
-    }
-    .header ul {
-        grid-column: 4 / 7;
+#b {
+    display: none;
+}
+.Mid{
+    margin-top: 25%;
+    margin-bottom: 25%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.Mid .Nombre{
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 3.5em;
+}
+.Mid .txt1{
+    color: black;
+    background-color: #ffd863;
+    opacity: 0.8;
+    background-image:  linear-gradient(30deg, #f7b945 12%, transparent 12.5%, transparent 87%, #f7b945 87.5%, #f7b945), linear-gradient(150deg, #f7b945 12%, transparent 12.5%, transparent 87%, #f7b945 87.5%, #f7b945), linear-gradient(30deg, #f7b945 12%, transparent 12.5%, transparent 87%, #f7b945 87.5%, #f7b945), linear-gradient(150deg, #f7b945 12%, transparent 12.5%, transparent 87%, #f7b945 87.5%, #f7b945), linear-gradient(60deg, #f7b94577 25%, transparent 25.5%, transparent 75%, #f7b94577 75%, #f7b94577), linear-gradient(60deg, #f7b94577 25%, transparent 25.5%, transparent 75%, #f7b94577 75%, #f7b94577);
+    background-size: 38px 67px;
+    background-position: 0 0, 0 0, 19px 33px, 19px 33px, 0 0, 19px 33px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-style: solid;
+    border-radius: 55px;
+    padding: 5%;
+}
+.Mid .txt1 .btn1{
+    border-style: solid;
+    border-color: black;
+    border-radius: 15px;
+    background-color: transparent;
+    color: black;
+    padding: 5%;
+    transition: 0.2s;
+}
+.Mid .txt1 h3{
+    font-size: 2em;
+}
+.Mid .txt1 .btn1:hover{
+    color: black;
+    background-color: white;
+}
+.Gustos .gH2{
+    font-size: 3em;
+}
+.Gustos img{
+    width: 100%;
+}
+.Gustos .slider_nav{
+    background-color: #ffd863;
+    opacity: 0.8;
+    background: linear-gradient(135deg, #f7b94555 25%, transparent 25%) -19px 0/ 38px 38px, linear-gradient(225deg, #f7b945 25%, transparent 25%) -19px 0/ 38px 38px, linear-gradient(315deg, #f7b94555 25%, transparent 25%) 0px 0/ 38px 38px, linear-gradient(45deg, #f7b945 25%, #ffd863 25%) 0px 0/ 38px 38px;
+    color: black;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    gap: 1em;
+    align-items: center;
+    padding: 3%;
+    border-style: solid;
+    border-color: rgb(255, 205, 88);
+    border-width: 5px;
+}
+.Gustos .slider_container{
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    opacity: 0;
+    pointer-events: none;
+}
+.Gustos .slider_container--show{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+.slider_img{
+    width: 150px;
+    height: 150px;
+    border-radius: 80%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+.img_s{
+    border-radius: 50%;
+}
+.flecha{
+    width: 90%;
+    cursor: pointer;
+}
+
+@media (max-width: 760px){
+    .btn{
         display: flex;
-      }
-      .header ul li {
-        margin-right: 3em;
-        list-style: none;
-      }
-      nav ul li a {
-        text-decoration: none;
-        color: #fff;
-        cursor: pointer;
-      }
-      .Header ul li a:hover {
-        color: #fff;
-      }
-      .Header .menu-bar {
-        display: none;
-      }
-      .navbar .shop {
-        grid-column: 8 / 9;
-        justify-content: flex-end;
-      }
-      .Header {
-        position: relative;
-      }
-      .Header .menu {
-        position: absolute;
+        flex-direction: row-reverse;
+        margin-top: 3%;
+        margin-right: 3%;
+    }
+    .menu-d ul{
+        position: fixed;
+        flex-direction: column;
         width: 100%;
-        height: 70vh;
-        display: grid;
+        top: 9%;
+        right: -150%;
+        text-align: center;
+        transition: all .5s ease;
+        margin-right: 5%;
+        background-color: rgb(28, 28, 28);
+        padding-right: 15%;
+    }
+    .menu li{
+        display: flex;
+        flex-wrap: wrap;
         align-items: center;
-        background-color:rgb(49, 49, 49);
-        transform: translateX(170%);
-        transition: all 1s;
-        margin-top: 34em;
-        z-index: 1;
-      } 
-      .Header .menu-toggle {
-        transform: translateX(70%);
-      }  
-       .navbar .shop {
-         display: none;
-       }
-      .Header .menu-bar {
-        display: block;
-      }
-      .Header .menu-bar .fas {
-        color:#fff;
-      }
-      .Header .menu li {
-        list-style: none;
-        margin: 0 auto;
-      }  
-      .Header .menu li a {
-        text-decoration: none;
-        color: #181818;
-        font-size: 1.2em;
-      } 
-      .Header .menu-bar {
-        grid-column: 8 / 10;
-        color: #fff;
-        font-size: 2em;
-        cursor: pointer;
-        z-index: 1;
-      }  
-      .hero .info-content {
-        z-index: 0;
-        grid-column: 2 / 9;
-        grid-row: 5 / 7;
-      }
-      .hero .info-content h1 {
-        font-size: 3.5em;
-      }
-      .hero .info-content h3 {
-        font-size: 1em;
-      }
-      .radio-section {
-        grid-template-areas:
-        "listen-online social-network"
-      }
-      .radio-section h2 {
-        display: none;
-      }
-      .radio-section .social-network {
-        margin: 0 auto;
-      }
-      .radio-section .social-network .fab {
-        color: #fff;
-      }
+        margin: 2%;
+        line-height: 30px;
+    }
+    #b:checked~ul{
+        right: -5%;
+    }
 }
