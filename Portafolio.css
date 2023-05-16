@@ -66,6 +66,8 @@ header .menu a:hover{
     border-style: solid;
     border-radius: 55px;
     padding: 5%;
+    margin-left: 7%;
+    margin-right: 7%;
 }
 .Mid .txt1 .btn1{
     border-style: solid;
@@ -106,9 +108,12 @@ header .menu a:hover{
     border-width: 5px;
 }
 .Gustos .slider_container{
-    display: grid;
+    text-align: center;
+    display: flex;
     grid-template-columns: 1fr max-content;
     justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
     gap: 2em;
     grid-column: 2/3;
@@ -121,19 +126,35 @@ header .menu a:hover{
     opacity: 1;
     transition: opacity 1.5s ease-in-out;
 }
+.slider_texto{
+    font-size: 1.5em;
+    margin-left: 15%;
+    margin-right: 15%;
+}
 .slider_img{
-    width: 150px;
-    height: 150px;
-    border-radius: 80%;
-    object-fit: cover;
-    object-position: 50% 50%;
+    width: 50%;
+    height: 50%;
 }
 .img_s{
-    border-radius: 50%;
+    border-radius: 50px;
+    margin-top: 15%;
+    object-position: 50% 50%;
 }
 .flecha{
     width: 90%;
     cursor: pointer;
+    transition: 0.3s;
+}
+.flecha:hover{
+    filter: invert(100%) sepia(13%) saturate(2%) hue-rotate(128deg) brightness(111%) contrast(101%);
+}
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: rgb(14, 14, 14);
+    margin-top: 15%;
+    padding: 5%;
 }
 
 @media (max-width: 760px){
