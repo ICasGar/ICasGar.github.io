@@ -127,7 +127,7 @@ header .menu a:hover{
     transition: opacity 1.5s ease-in-out;
 }
 .slider_texto{
-    font-size: 1.5em;
+    font-size: 1.3em;
     margin-left: 15%;
     margin-right: 15%;
 }
@@ -147,6 +147,10 @@ header .menu a:hover{
 }
 .flecha:hover{
     filter: invert(100%) sepia(13%) saturate(2%) hue-rotate(128deg) brightness(111%) contrast(101%);
+}
+.Sobre_mi{
+    margin-top: 15%;
+    background-color: black;
 }
 
 footer{
