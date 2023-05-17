@@ -1,47 +1,110 @@
 *{
     box-sizing: border-box;
     font-family: sans-serif;
+    margin: 0;
 }
 body{
     background-color: rgb(59, 59, 59);
     color: rgb(236, 236, 236);
     text-align: center;
+}.header{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;left: 0;
+    z-index: 2;
+    background-color: rgb(31, 31, 31);
 }
-header{
-    font-size: 1.6em;
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
 }
-header .menu-d {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+.container .btn-menu, .logo{
+    float: left;
+    line-height:100px;
 }
-header .menu-d p{
-    text-align: left;
-    margin-left: 10%;
+.container .btn-menu label{
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
 }
-header .menu{
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+.logo h1{
+    color: #fff;
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 10px;
 }
-header .menu a{
-    color: white;
-    text-decoration: none;
-    padding: 15%;
-    transition: 0.5s;
-}
-header .menu a:hover{
-    color: rgb(236, 188, 57);
-    transition: 0.2s;
-}
-.btn{
-    font-size: 2em;
+.container .menu{
     float: right;
-    color: white;
-    display: none;
-    margin-right: 0;
+    line-height: 100px;
 }
-#b {
+.container .menu a{
+    display: inline-block;
+    padding: 15px;
+    line-height: normal;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 15px;
+    margin-right: 5px;
+}
+.container .menu a:hover{
+    border-bottom: 2px solid #c7c7c7;
+    padding-bottom: 5px;
+}
+#btn-menu{
     display: none;
+}
+.container-menu{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-menu:checked ~ .container-menu{
+    opacity: 1;
+    visibility: visible;
+}
+.cont-menu{
+    width: 100%;
+    max-width: 250px;
+    background: #1c1c1c;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+#btn-menu:checked ~ .container-menu .cont-menu{
+    transform: translateX(0%);
+}
+.cont-menu nav{
+    transform: translateY(15%);
+}
+.cont-menu nav a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+.cont-menu nav a:hover{
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+.cont-menu label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
 }
 .Mid{
     margin-top: 25%;
@@ -162,39 +225,11 @@ footer{
     background-color: rgb(14, 14, 14);
     margin-top: 15%;
     padding: 5%;
-    margin-left: -3%;
-    margin-bottom: -3%;
-    margin-right: -3%;
 }
 
 @media (max-width: 760px){
     *{
         margin: 3px;
-    }
-    .btn{
-        display: flex;
-        flex-direction: row-reverse;
-        margin-top: 3%;
-        margin-right: 3%;
-    }
-    .menu-d ul{
-        position: fixed;
-        flex-direction: column;
-        width: 100%;
-        top: 9%;
-        right: -150%;
-        text-align: center;
-        transition: all .5s ease;
-        margin-right: 5%;
-        background-color: rgb(28, 28, 28);
-        padding-right: 15%;
-    }
-    .menu li{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        margin: 2%;
-        line-height: 30px;
     }
     .slider_img{
         width: 100%;
