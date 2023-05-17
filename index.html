@@ -10,21 +10,37 @@
     <script src='main.js'></script>
 </head>
 <body>
-    <header>
-        <nav class="menu-d">
-            <p><b>Malaquita</b></p>
-            <input type="checkbox" id="b">
-            <label for="b" class="btn">
-                <i class="fa-solid fa-bars"></i>
-            </label>
-            <ul class="menu">
-                    <li><a href="#inicio"><b>Inicio</b></a></li>
-                    <li><a href="#gustos"><b>Gustos</b></a></li>
-                    <li><a href="#sobre_mi"><b>Sobre mi</b></a></li>
-                    <li><a href="#footer"><b>Redes</b></a></li>
-            </ul>
-        </nav>
-    </header>
+    <header class="header">
+		<div class="container">
+		<div class="btn-menu">
+			<label for="btn-menu">☰</label>
+		</div>
+			<div class="logo">
+				<h1>Logotipo</h1>
+			</div>
+			<nav class="menu">
+				<a href="#">Inicio</a>
+				<a href="#">Nosotros</a>
+				<a href="#">Blog</a>
+				<a href="#">Contacto</a>
+			</nav>
+		</div>
+	</header>
+	<div class="capa"></div>
+    <input type="checkbox" id="btn-menu">
+    <object class="container-menu">
+        <div class="cont-menu">
+            <nav>
+                <a href="#">Portafolio</a>
+                <a href="#">Servicios</a>
+                <a href="#">Suscribirse</a>
+                <a href="#">Facebook</a>
+                <a href="#">Youtube</a>
+                <a href="#">Instagram</a>
+            </nav>
+            <label for="btn-menu">✖️</label>
+        </div>
+    </object>
     <main class="Mid" id="inicio">
         <h2 class="Nombre">Iván Castro García</h2>  
         <section class="txt1">
