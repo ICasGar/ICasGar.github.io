@@ -19,6 +19,9 @@ body{
     width: 90%;
     max-width: 1200px;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
 }
 .container .btn-menu, .logo{
     float: left;
@@ -38,10 +41,13 @@ body{
 .container .menu{
     float: right;
     line-height: 100px;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 .container .menu a{
     display: inline-block;
-    padding: 15px;
+    padding: 10px;
     line-height: normal;
     text-decoration: none;
     color: #fff;
@@ -66,6 +72,7 @@ body{
     transition: all 500ms ease;
     opacity: 0;
     visibility: hidden;
+    z-index: 3;
 }
 #btn-menu:checked ~ .container-menu{
     opacity: 1;
@@ -107,15 +114,21 @@ body{
     font-size: 18px;
 }
 .Mid{
-    margin-top: 25%;
-    margin-bottom: 25%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-.Mid .Nombre{
+    margin-top: 30%;
+    margin-bottom: 15%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin-left: 5%;
     margin-right: 5%;
+    align-items: center;
+}
+.Mid .Nombre{
     font-size: 3.5em;
+}
+.Mid .Nombre p{
+    padding: 5%;
 }
 .Mid .txt1{
     color: black;
@@ -124,13 +137,9 @@ body{
     background-image:  linear-gradient(30deg, #f7b945 12%, transparent 12.5%, transparent 87%, #f7b945 87.5%, #f7b945), linear-gradient(150deg, #f7b945 12%, transparent 12.5%, transparent 87%, #f7b945 87.5%, #f7b945), linear-gradient(30deg, #f7b945 12%, transparent 12.5%, transparent 87%, #f7b945 87.5%, #f7b945), linear-gradient(150deg, #f7b945 12%, transparent 12.5%, transparent 87%, #f7b945 87.5%, #f7b945), linear-gradient(60deg, #f7b94577 25%, transparent 25.5%, transparent 75%, #f7b94577 75%, #f7b94577), linear-gradient(60deg, #f7b94577 25%, transparent 25.5%, transparent 75%, #f7b94577 75%, #f7b94577);
     background-size: 38px 67px;
     background-position: 0 0, 0 0, 19px 33px, 19px 33px, 0 0, 19px 33px;
-    margin-left: 5%;
-    margin-right: 5%;
     border-style: solid;
     border-radius: 55px;
     padding: 5%;
-    margin-left: 7%;
-    margin-right: 7%;
 }
 .Mid .txt1 .btn1{
     border-style: solid;
@@ -190,7 +199,6 @@ body{
     transition: opacity 1.5s ease-in-out;
 }
 .slider_texto{
-    font-size: 1.3em;
     margin-left: 15%;
     margin-right: 15%;
 }
@@ -211,22 +219,37 @@ body{
 .flecha:hover{
     filter: invert(100%) sepia(13%) saturate(2%) hue-rotate(128deg) brightness(111%) contrast(101%);
 }
-.Sobre_mi{
+.sobreMi{
+    background-color: rgb(15, 15, 15);
     margin-top: 15%;
-    background-color: black;
+    margin-left: 10%;
+    margin-right: 10%;
 }
-
+.sobreMi h3{
+    font-size: 2em;
+    padding: 5%;
+}
+.sobreMi div{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 5%;
+}
 footer{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     grid-template-columns: repeat(3, 1fr);
     background-color: rgb(14, 14, 14);
     margin-top: 15%;
     padding: 5%;
 }
-
+.contacto{
+}
+footer a{
+    color: white;
+}
 @media (max-width: 760px){
     *{
         margin: 3px;
