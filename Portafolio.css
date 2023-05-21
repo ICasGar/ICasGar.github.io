@@ -4,8 +4,11 @@
     margin: 0;
 }
 body{
-    background-color: #EBF38B;
-    color: #584D3D;
+    background-color: #65bde6;
+opacity: 1;
+background-image: radial-gradient(#4a90ca 1.55px, #65bde6 1.55px);
+background-size: 31px 31px;
+    color: #070137;
     text-align: center;
 }.header{
     width: 100%;
@@ -64,7 +67,7 @@ body{
 }
 .container-menu{
     position: absolute;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100vh;
     top: 0;left: 0;
@@ -113,32 +116,33 @@ body{
     font-size: 18px;
 }
 .Mid{
-    margin-top: 30%;
+    margin-top: 11%;
     margin-bottom: 15%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-left: 5%;
     margin-right: 5%;
     align-items: center;
 }
 .Mid .Nombre{
-    font-size: 3.5em;
+    font-size: 5em;
 }
 .Mid .Nombre p{
     padding: 5%;
 }
 .Mid .txt1{
     color: black;
-    background-color: #ffd863;
-    opacity: 0.8;
-    background-image:  linear-gradient(30deg, #f7b945 12%, transparent 12.5%, transparent 87%, #f7b945 87.5%, #f7b945), linear-gradient(150deg, #f7b945 12%, transparent 12.5%, transparent 87%, #f7b945 87.5%, #f7b945), linear-gradient(30deg, #f7b945 12%, transparent 12.5%, transparent 87%, #f7b945 87.5%, #f7b945), linear-gradient(150deg, #f7b945 12%, transparent 12.5%, transparent 87%, #f7b945 87.5%, #f7b945), linear-gradient(60deg, #f7b94577 25%, transparent 25.5%, transparent 75%, #f7b94577 75%, #f7b94577), linear-gradient(60deg, #f7b94577 25%, transparent 25.5%, transparent 75%, #f7b94577 75%, #f7b94577);
-    background-size: 38px 67px;
-    background-position: 0 0, 0 0, 19px 33px, 19px 33px, 0 0, 19px 33px;
+    background-color: #e5d065;
+background: linear-gradient(135deg, #e6b84255 25%, transparent 25%) -11px 0/ 22px 22px, linear-gradient(225deg, #e6b842 25%, transparent 25%) -11px 0/ 22px 22px, linear-gradient(315deg, #e6b84255 25%, transparent 25%) 0px 0/ 22px 22px, linear-gradient(45deg, #e6b842 25%, #e5d065 25%) 0px 0/ 22px 22px;
     border-style: solid;
     border-radius: 55px;
-    padding: 5%;
+    padding: 10%;
+    font-size: 1.5em;
+}
+.Mid .txt1 p{
+    margin-top: 15%;
 }
 .Mid .txt1 .btn1{
     border-style: solid;
@@ -154,7 +158,7 @@ body{
 }
 .Mid .txt1 .btn1:hover{
     color: black;
-    background-color: white;
+    background-color: rgb(163, 239, 242);
 }
 .Gustos .gH2{
     font-size: 3em;
@@ -163,9 +167,9 @@ body{
     width: 100%;
 }
 .Gustos .slider_nav{
-    background-color: #ffd863;
-    opacity: 0.8;
-    background: linear-gradient(135deg, #f7b94555 25%, transparent 25%) -19px 0/ 38px 38px, linear-gradient(225deg, #f7b945 25%, transparent 25%) -19px 0/ 38px 38px, linear-gradient(315deg, #f7b94555 25%, transparent 25%) 0px 0/ 38px 38px, linear-gradient(45deg, #f7b945 25%, #ffd863 25%) 0px 0/ 38px 38px;
+    background-color: #e5d065;
+opacity: 1;
+background: linear-gradient(135deg, #e6b84255 25%, transparent 25%) -11px 0/ 22px 22px, linear-gradient(225deg, #e6b842 25%, transparent 25%) -11px 0/ 22px 22px, linear-gradient(315deg, #e6b84255 25%, transparent 25%) 0px 0/ 22px 22px, linear-gradient(45deg, #e6b842 25%, #e5d065 25%) 0px 0/ 22px 22px;
     color: black;
     margin-left: 10%;
     margin-right: 10%;
@@ -202,9 +206,12 @@ body{
     margin-left: 15%;
     margin-right: 15%;
 }
+.slider_texto p{
+    margin-top: 5%;
+}
 .slider_img{
-    width: 350px;
-    height:  350px;
+    width: 50%;
+    height: 50%;
 }
 .img_s{
     border-radius: 50px;
@@ -221,7 +228,9 @@ body{
 }
 .sobreMi{
     color: black;
-    background-color: #9F956C;
+    background-color: #e5d065;
+opacity: 1;
+background: linear-gradient(135deg, #e6b84255 25%, transparent 25%) -11px 0/ 22px 22px, linear-gradient(225deg, #e6b842 25%, transparent 25%) -11px 0/ 22px 22px, linear-gradient(315deg, #e6b84255 25%, transparent 25%) 0px 0/ 22px 22px, linear-gradient(45deg, #e6b842 25%, #e5d065 25%) 0px 0/ 22px 22px;
     margin-top: 15%;
     margin-left: 10%;
     margin-right: 10%;
@@ -241,13 +250,14 @@ body{
 }
 .sobreMi_cont img{
     margin-left: 5%;
-    width: 40%;
+    width: 30%;
 }
 .sobreMi h3{
     font-size: 2em;
     padding: 5%;
 }
 footer{
+    color: rgb(207, 207, 207);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -279,7 +289,11 @@ footer a{
         right: -5%;
     }
     .Mid{
+        margin-top: 30%;
         flex-direction: column;
+    }
+    .Mid .Nombre{
+        font-size: 3.5em;
     }
     .sobreMi_cont p{
         width: 100%;
